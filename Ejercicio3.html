@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 3</title>
+</head>
+<body>
+<h1>Ejercicio 3</h1>
+<pre id="output"></pre>
+
+<script>
+const tags = ["js","css","js","html","css","js","react"];
+const unicos = tags.filter((t,i,a) => a.indexOf(t) === i);
+document.getElementById("output").textContent = JSON.stringify(unicos, null, 2);
+</script>
+
+</body>
+</html>

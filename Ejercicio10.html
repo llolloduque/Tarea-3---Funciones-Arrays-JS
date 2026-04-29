@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 10</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Ejercicio 10</h1>
+<pre id="output"></pre>
+
+<script>
+const usuarios = [
+{ id:1, nombre:"Ana", rol:"admin"},
+{ id:2, nombre:"Luis", rol:"user"},
+{ id:3, nombre:"Marta", rol:"user"},
+{ id:4, nombre:"Carlos", rol:"admin"}
+];
+
+const encontrado = usuarios.find(u => u.id === 3);
+document.getElementById("output").textContent = JSON.stringify(encontrado, null, 2);
+</script>
+
+</body>
+</html>

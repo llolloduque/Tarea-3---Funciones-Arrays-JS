@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 8</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Ejercicio 8</h1>
+<pre id="output"></pre>
+
+<script>
+const gastos = [
+{ concepto:"Pizza", categoria:"comida", importe:12 },
+{ concepto:"Bus", categoria:"transporte", importe:2.5 },
+{ concepto:"Sushi", categoria:"comida", importe:18 },
+{ concepto:"Cine", categoria:"ocio", importe:9 },
+{ concepto:"Taxi", categoria:"transporte", importe:8 },
+{ concepto:"Concierto", categoria:"ocio", importe:35 }
+];
+
+const porCategoria = gastos.reduce((acc,g) => {
+  acc[g.categoria] = (acc[g.categoria] || 0) + g.importe;
+  return acc;
+}, {});
+
+document.getElementById("output").textContent = JSON.stringify(porCategoria, null, 2);
+</script>
+
+</body>
+</html>

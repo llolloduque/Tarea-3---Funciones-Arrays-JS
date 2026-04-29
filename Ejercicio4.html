@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 4</title>
+</head>
+<body>
+<h1>Ejercicio 4</h1>
+<pre id="output"></pre>
+
+<script>
+const precios = [10,25.5,8.99,100,49.95];
+const conIVA = precios.map(p => Number((p * 1.21).toFixed(2)));
+document.getElementById("output").textContent = JSON.stringify(conIVA, null, 2);
+</script>
+
+</body>
+</html>

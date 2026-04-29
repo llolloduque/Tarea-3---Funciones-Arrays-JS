@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 16</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Ejercicio 16</h1>
+<pre id="output"></pre>
+
+<script>
+const pedidos = [
+{ id:"P01", importe:45.0, entregado:true },
+{ id:"P02", importe:120.0, entregado:false },
+{ id:"P03", importe:33.5, entregado:true },
+{ id:"P04", importe:89.0, entregado:true },
+{ id:"P05", importe:15.0, entregado:false }
+];
+
+let texto = "";
+
+pedidos
+.filter(p => p.entregado)
+.map(p => ({
+  ...p,
+  importeConIVA: Number((p.importe * 1.21).toFixed(2))
+}))
+.sort((a,b)=>b.importeConIVA-a.importeConIVA)
+.forEach(p => {
+  texto += `${p.id} → ${p.importeConIVA} €\n`;
+});
+
+document.getElementById("output").textContent = texto;
+</script>
+
+</body>
+</html>

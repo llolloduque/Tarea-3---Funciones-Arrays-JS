@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 13</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Ejercicio 13</h1>
+<pre id="output"></pre>
+
+<script>
+const empleados = [
+{ nombre:"Ana", salario:2800 },
+{ nombre:"Luis", salario:3500 },
+{ nombre:"Marta", salario:2200 },
+{ nombre:"Carlos", salario:4100 }
+];
+
+const ordenados = [...empleados].sort((a,b)=>b.salario-a.salario);
+
+document.getElementById("output").textContent = JSON.stringify(ordenados, null, 2);
+</script>
+
+</body>
+</html>

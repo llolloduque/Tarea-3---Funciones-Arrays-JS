@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 5</title>
+</head>
+<body>
+<h1>Ejercicio 5</h1>
+<pre id="output"></pre>
+
+<script>
+const usuarios = [
+{ id:1, nombre:"Ana", edad:23, ciudad:"Madrid"},
+{ id:2, nombre:"Luis", edad:31, ciudad:"Barcelona"},
+{ id:3, nombre:"Marta", edad:19, ciudad:"Sevilla"}
+];
+
+const resumen = usuarios.map(({nombre, edad}) => ({nombre, edad}));
+document.getElementById("output").textContent = JSON.stringify(resumen, null, 2);
+</script>
+
+</body>
+</html>

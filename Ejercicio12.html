@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 12</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Ejercicio 12</h1>
+<pre id="output"></pre>
+
+<script>
+const edades = [31,5,18,42,7,23];
+const frutas = ["mango","apple","kiwi","banana"];
+
+const edadesOrden = [...edades].sort((a,b)=>a-b);
+const frutasOrden = [...frutas].sort();
+
+document.getElementById("output").textContent =
+JSON.stringify({edadesOrden, frutasOrden}, null, 2);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 15</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Ejercicio 15</h1>
+<pre id="output"></pre>
+
+<script>
+const usuarios = [
+{ nombre:"Ana", roles:["admin","editor"] },
+{ nombre:"Luis", roles:["user"] },
+{ nombre:"Marta", roles:["editor","user"] },
+{ nombre:"Carlos", roles:["admin"] }
+];
+
+let texto = "";
+
+usuarios.forEach(u => {
+  const acceso = u.roles.includes("admin");
+  texto += `${u.nombre}: ${acceso ? "Acceso permitido" : "Acceso denegado"}\n`;
+});
+
+document.getElementById("output").textContent = texto;
+</script>
+
+</body>
+</html>
